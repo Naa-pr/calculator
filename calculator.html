@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script lang="javascript">
+        var x;
+        function eval1(calc){
+            x=eval(calc.input.value);
+            calc.input.value=x;
+            document.getElementById(clock).innerHTML=x
+
+        }
+        function f1(calc){
+            calc.input.value="";
+        }
+        function clock(){
+            var a = new Date()
+            var b = a.toLocaleTimeString()
+            document.getElementById("finish").innerHTML=b
+        }
+        setInterval(clock,1000)
+    </script>
+    <style>
+        #hello{
+            size: 1cm;
+            box-sizing: content-box;
+            width:80%;
+            background-color: pink;
+            color: indigo;
+            border: .3cm solid black;
+        }
+        
+        input[type=text]{
+            font-size: 1.5cm;
+            box-shadow: lemonchiffon;
+            background-origin: sizing 2px;
+            
+        }
+        input[type=button]{
+            font-size: 2cm;
+            background-color: indigo;
+            color: wheat;
+            border: 3px solid black;
+            width: 17.7%;
+        }
+        input{
+            width: 2cm;
+        }
+        #finish{
+            text-align: right;
+            font-size: 2cm;
+            background-color: cornflowerblue;
+            align-self: right: 3px;;
+            position: right;
+        }
+        html{
+            align-content: center;
+            background-color: rgb(red, green, blue);
+            background-position: center;
+            animation: cubic-bezier(1, 0, 0, 1);
+            object-position: center;
+        }
+        div{
+            position: inherit;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>This is a basic calculator</h1>
+    <div>
+        <div2 id="finish">
+            <script type="text/javascript">
+            var z = new Date()
+            s = z.getDate()
+            document.write("Today is"+ s)
+            </script>
+        </div2>
+        <form name="calc" class="table">
+            <tr>
+                <th>
+                    <input type="text" name="input" size="2cm" id="hello">
+                </th>
+            </tr><br>
+            <tr>
+                <td>
+                    <input type="button" name="one" value="1" onclick="calc.input.value+='1'">
+                </td>
+                <td>
+                    <input type="button" name="two" value="2" onclick="calc.input.value+='2'">
+                </td>
+                <td>
+                    <input type="button" name="three" value="3" onclick="calc.input.value+='3'">
+                </td>
+                <td>
+                    <input type="button" name="four" value="4" onclick="calc.input.value+='4'">
+                </td>
+            </tr><br>
+            <tr>
+                <td>
+                    <input type="button" name="five" value="5" onclick="calc.input.value+='5'">
+                </td>
+                <td>
+                    <input type="button" name="six" value="6" onclick="calc.input.value+='6'">
+                </td>
+                <td>
+                    <input type="button" name="seven" value="7" onclick="calc.input.value+='7'">
+                </td>
+                <td>
+                    <input type="button" name="eight" value="8" onclick="calc.input.value+='8'">
+                </td>
+
+            </tr><br>
+            <tr>
+                <td>
+                    <input type="button" name="nine" value="9" onclick="calc.input.value+='9'">
+                </td>
+                <td>
+                    <input type="button" name="zero" value="0" onclick="calc.input.value+='0'">
+                </td>
+                <td>
+                    <input type="button" name="plus" value="+" onclick="calc.input.value+='+'">
+                </td>
+                <td>
+                    <input type="button" name="minus" value="-" onclick="calc.input.value+='-'">
+                </td>
+            </tr><br>
+            <tr>
+                <td>
+                    <input type="button" name="divide" value="/" onclick="calc.input.value+='/'">
+                </td>
+                <td>
+                    <input type="button" name="multiply" value="*" onclick="calc.input.value+='*'">
+                </td>
+                <td>
+                    <input type="button" name="start" value="C" onclick="f1(this.form)">
+                </td>
+                <td>
+                    <input type="button" name="equal" value="=" onclick="eval1(this.form)">
+                </td>
+            </tr><br>
+            <tr>
+                <td>
+                    <input type="button" name="firstbracket" value="(" onclick="calc.input.value+='('">
+                </td>
+                <td>
+                    <input type="button" name="firstbracket2" value=")" onclick="calc.input.value+=')'">
+                </td>
+                <td>
+                    <input type="button" name="secondbracket" value="{" onclick="calc.input.value+='{'">
+                </td>
+                <td>
+                    <input type="button" name="secondbracket" value="}" onclick="calc.input.value+='}'">
+                </td>
+            </tr><br>
+            <tr>
+
+            </tr>
+        </form>
+    </div>
+        
+</body>
+</html>
